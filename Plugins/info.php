@@ -1,13 +1,13 @@
-#!/usr/local/bin/php
+#!/usr/bin/env php
 
 <?php
 
-require "/Users/amitdhamu/BitBar/vendor/autoload.php";
+require __DIR__."/../vendor/autoload.php";
 
 use SteveEdson\BitBar;
 
 // Create BitBar formatter
-$bb = new BitBar();
+$bb = new BitBar;
 
 // Create the first line
 $line = $bb->newLine();
@@ -23,6 +23,6 @@ $line = $bb->newLine();
 // Set the text and formatting
 $line
     ->setText("Hello World")
-    ->setColour("yellow")
+    ->setColour("brown")
     ->setUrl("https://steveedson.co.uk")
     ->show();
