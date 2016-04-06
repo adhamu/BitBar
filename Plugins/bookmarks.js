@@ -1,18 +1,18 @@
 #!/usr/bin/env /usr/local/bin/node
 
 const bitbar = require('bitbar');
-const config = require('../bookmarks.json');
+const data = require('../bookmarks.json');
 const _ = require('underscore');
 
 var bookmarks = [{
-    text: '★',
-    color: bitbar.darkMode ? 'white' : 'red',
+    text: data.title,
+    color: bitbar.darkMode ? data.darkModeColor : data.color,
     dropdown: false
 }];
 
 bookmarks.push(bitbar.sep);
 
-_.each(config.bookmarks, function(category, c) {
+_.each(data.bookmarks, function(category, c) {
     bookmarks.push({
         text: c
     });

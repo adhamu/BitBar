@@ -1,4 +1,7 @@
 {
+    "title": "★",
+    "color": "red",
+    "darkModeColor": "white",
     "bookmarks": {
         "home": {
             "Google": [
