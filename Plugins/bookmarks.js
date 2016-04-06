@@ -22,10 +22,18 @@ _.each(data.bookmarks, function(category, c) {
         });
         _.each(bookmark, function(value, c) {
             var item = {
-                text: '-- ' + value.title,
-                href: value.href
+                text: '-- ' + value.title
             }
-            item.color = value.color ? value.color : null;
+
+            // Options (https://github.com/matryer/bitbar#plugin-api)
+            if (value.color) item.color = value.color;
+            if (value.href) item.href = value.href;
+            if (value.font) item.font = value.font;
+            if (value.size) item.size = value.size;
+            if (value.alternate) item.alternate = true;
+            if (value.templateImage) item.templateImage = value.templateImage;
+            if (value.image) item.image = value.image;
+
             bookmarks.push(item);
         });
     });
