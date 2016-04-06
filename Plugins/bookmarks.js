@@ -25,9 +25,7 @@ _.each(data.bookmarks, function(category, c) {
                 text: '-- ' + value.title,
                 href: value.href
             }
-            if (value.color) {
-                item.color = value.color;
-            }
+            item.color = value.color ? value.color : null;
             bookmarks.push(item);
         });
     });
