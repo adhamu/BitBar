@@ -13,6 +13,9 @@ var bookmarks = [{
 bookmarks.push(bitbar.sep);
 
 _.each(config.bookmarks, function(category, c) {
+    bookmarks.push({
+        text: c
+    });
     _.each(category, function(bookmark, b) {
         bookmarks.push({
             text: b
@@ -27,8 +30,8 @@ _.each(config.bookmarks, function(category, c) {
             }
             bookmarks.push(item);
         });
-        bookmarks.push(bitbar.sep);
     });
+    bookmarks.push(bitbar.sep);
 });
 
 bitbar(bookmarks);
