@@ -1,0 +1,20 @@
+{
+    "links": {
+        "home": {
+            "Google": [
+                {
+                    "title": "Home",
+                    "href": "https://www.google.com"
+                },
+                {
+                    "title": "Drive",
+                    "href": "https://drive.google.com"
+                },
+                {
+                    "title": "Mail",
+                    "href": "https://mail.google.com"
+                }
+            ]
+        }
+    }
+}

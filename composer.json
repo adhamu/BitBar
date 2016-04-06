@@ -1,0 +1,5 @@
+{
+  "require": {
+    "steveedson/bitbar-php": "dev-master"
+  }
+}

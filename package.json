@@ -1,0 +1,10 @@
+{
+  "name": "mybitbar",
+  "version": "1.0.0",
+  "description": "Personal bitbar setup",
+  "dependencies": {
+    "bitbar": "^0.2.1",
+    "underscore": "^1.8.3"
+  },
+  "author": "Amit Dhamu"
+}
