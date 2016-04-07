@@ -5,24 +5,19 @@
 require __DIR__."/../../vendor/autoload.php";
 
 use SteveEdson\BitBar;
+use Symfony\Component\Process\Process;
 
-// Create BitBar formatter
 $bb = new BitBar;
-
-// Create the first line
 $line = $bb->newLine();
-
-// Set the text and formatting
-$line
-    ->setText("★")
-    ->setColour("purple")
-    ->show();
-
+$line->setText("⌘")->setColour("green")->show();
 $line = $bb->newLine();
+$line->setText("Local IP: ".runCommand("ipconfig getifaddr en0"))->show();
 
-// Set the text and formatting
-$line
-    ->setText("Hello World")
-    ->setColour("brown")
-    ->setUrl("https://steveedson.co.uk")
-    ->show();
+function runCommand($command) {
+    $process = new Process($command);
+    $process->setTimeout(3600);
+    $process->run();
+
+    $output = str_replace(["\n", "\r"], "", $process->getOutput());
+    return $output;
+}

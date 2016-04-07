@@ -1,5 +1,6 @@
 {
   "require": {
-    "steveedson/bitbar-php": "dev-master"
+    "steveedson/bitbar-php": "dev-master",
+    "symfony/process": "^3.0"
   }
 }
