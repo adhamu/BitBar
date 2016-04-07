@@ -1,7 +1,7 @@
 #!/usr/bin/env /usr/local/bin/node
 
 const bitbar = require('bitbar');
-const data = require('../bookmarks.json');
+const data = require('../Resources/bookmarks.json');
 const _ = require('underscore');
 
 var bookmarks = [{
