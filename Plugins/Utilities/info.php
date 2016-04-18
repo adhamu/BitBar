@@ -9,8 +9,9 @@ use Symfony\Component\Process\Process;
 
 $bb = new BitBar;
 $line = $bb->newLine();
-$line->setText("⌘")->setColour("green")->show();
+$line->setText("⌘")->setColour("purple")->show();
 $line = $bb->newLine();
+$line->setText("Local IP: ".runCommand("ipconfig getifaddr en0"))->show();
 $line->setText("Local IP: ".runCommand("ipconfig getifaddr en0"))->show();
 
 function runCommand($command) {
